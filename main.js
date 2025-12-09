@@ -7,6 +7,7 @@ import {
   getTask,
   sortByDefault,
   sortReversDate,
+  sortTasksByStatus,
 } from "./utils/allFunctionsOfTasks.js";
 
 
@@ -21,6 +22,7 @@ const menu = {
 const menu_sorted_tasks = {
   default: "sort by date",
   reversed_date: "sort by reversd date",
+  sorted_status: "sort by statuses"
 };
 
 let input1;
@@ -69,10 +71,13 @@ function main_game(menu) {
         });
         input1 = input("Enter your choice: ");
         if (input1 == "1") {
-          sortByDefault(db);
+          console.log(sortByDefault(db));
           if (input1 == "2") {
-            sortReversDate(db);
+            console.log(sortReversDate(db));
           }
+          if(input1 == "3"){
+            sortTasksByStatus(db)
+           };
         }
     }
     if (userinput == "6") {
