@@ -5,7 +5,7 @@ export function createtask(name, description, status) {
   let task = {
     name,
     id: nanoid(),
-    Date: Date(),
+    date: Date.now(),
     description,
     status,
   };

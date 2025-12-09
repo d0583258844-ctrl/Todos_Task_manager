@@ -1,5 +1,10 @@
 import { db } from "../DB/tasksdb.js";
 
 export function sortByDefault(db) {
-  return db.sort((a, b) => b.Date - a.Date);
+   db.sort((a, b) => a.date - b.date);
+}
+
+
+export function sortReversDate(db) {
+  db.sort((a, b) => b.date - a.date)
 }
